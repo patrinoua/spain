@@ -39,6 +39,40 @@ export const Sea = styled(El)`
   left: -30px;
   top: 380px;
 `
+export const Eye = styled(El)`
+  background: black;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 50%;
+  color: green;
+  z-index: 30;
+`
+export const EyeLeft = styled(Eye)`
+  top: 30%;
+  left: 30%;
+`
+export const EyeRight = styled(Eye)`
+  top: 30%;
+  left: 60%;
+`
+export const Smile = styled(Eye)`
+  top: 38%;
+  left: 27%;
+  width: 52px;
+  height: 32px;
+  box-shadow: 0px 5px 0px black;
+  background: transparent;
+`
+export const Smiley = styled(El)`
+  width: 110px;
+  height: 110px;
+  left: 9%;
+  top: 11%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 20;
+`
 export const Sun = styled(El)`
   width: 100px;
   height: 100px;

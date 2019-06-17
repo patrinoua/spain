@@ -5,6 +5,10 @@ import {
   SunReflexion,
   Sea,
   Sun,
+  Smiley,
+  EyeLeft,
+  EyeRight,
+  Smile,
   Mountain,
   Prasinada,
   Button
@@ -12,10 +16,11 @@ import {
 
 export default class Spain extends React.Component {
   state = {
-    daylight: true
+    daylight: true,
+    smileyIsVisible: false
   }
   render() {
-    const { daylight } = this.state
+    const { daylight, smileyIsVisible } = this.state
     const colors = {
       sky: daylight ? 'rgb(0, 142, 255)' : '#171553',
       sun: daylight ? '#FFA42A' : '#fbe2ff',
@@ -35,7 +40,23 @@ export default class Spain extends React.Component {
           {daylight ? 'Night' : 'Day'}
         </Button>
         <Sky color={sky}>
-          <Sun color={sun} />
+          <Sun
+            color={sun}
+            onMouseEnter={() => {
+              this.setState({ smileyIsVisible: true })
+            }}
+          />
+          {smileyIsVisible && (
+            <Smiley
+              onMouseLeave={() => {
+                this.setState({ smileyIsVisible: false })
+              }}
+            >
+              <EyeLeft />
+              <EyeRight />
+              <Smile />
+            </Smiley>
+          )}
           <SunReflexion
             name="SUN_REFLEXION"
             left={'9%'}
