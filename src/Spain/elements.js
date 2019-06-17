@@ -112,6 +112,7 @@ export const Sunlight = styled(El)`
   transform: rotate(${({ rotate }) => rotate || 0}deg);
   width: ${({ width }) => width || '30'}px;
   height: 10px;
+  border-radius: 5px;
 `
 export const SunReflexion = styled(El)`
   border-radius: 50%;
