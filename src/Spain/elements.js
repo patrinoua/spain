@@ -56,6 +56,13 @@ export const EyeRight = styled(Eye)`
   top: 30%;
   left: 60%;
 `
+export const EyeRightWink = styled(Eye)`
+  top: 25%;
+  width: 13px;
+  left: 56%;
+  box-shadow: 0px 5px 0px black;
+  background: transparent;
+`
 export const Smile = styled(Eye)`
   top: 38%;
   left: 27%;
@@ -101,7 +108,11 @@ export const Prasinada = styled(El)`
   width: 260px;
   height: 400px;
 `
-
+export const Sunlight = styled(El)`
+  transform: rotate(${({ rotate }) => rotate || 0}deg);
+  width: ${({ width }) => width || '30'}px;
+  height: 10px;
+`
 export const SunReflexion = styled(El)`
   border-radius: 50%;
   border: 5px solid black;

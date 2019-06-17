@@ -5,9 +5,11 @@ import {
   SunReflexion,
   Sea,
   Sun,
+  Sunlight,
   Smiley,
   EyeLeft,
   EyeRight,
+  EyeRightWink,
   Smile,
   Mountain,
   Prasinada,
@@ -53,10 +55,47 @@ export default class Spain extends React.Component {
               }}
             >
               <EyeLeft />
-              <EyeRight />
+              {daylight ? <EyeRight /> : <EyeRightWink />}
               <Smile />
             </Smiley>
           )}
+          {smileyIsVisible &&
+            daylight && (
+              <React.Fragment>
+                <Sunlight color={sun} rotate={0} top={'105px'} left={'8px'} />
+                <Sunlight color={sun} rotate={0} top={'105px'} left={'164px'} />
+                <Sunlight color={sun} rotate={90} top={'27px'} left={'86px'} />
+                <Sunlight color={sun} rotate={90} top={'183px'} left={'86px'} />
+                <Sunlight
+                  color={sun}
+                  rotate={135}
+                  top={'47px'}
+                  left={'144px'}
+                  width={20}
+                />
+                <Sunlight
+                  color={sun}
+                  rotate={45}
+                  top={'162px'}
+                  left={'145px'}
+                  width={20}
+                />
+                <Sunlight
+                  color={sun}
+                  rotate={45}
+                  top={'47px'}
+                  left={'31px'}
+                  width={20}
+                />
+                <Sunlight
+                  color={sun}
+                  rotate={135}
+                  top={'162px'}
+                  left={'31px'}
+                  width={20}
+                />
+              </React.Fragment>
+            )}
           <SunReflexion
             name="SUN_REFLEXION"
             left={'9%'}
