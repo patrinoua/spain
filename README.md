@@ -2,7 +2,9 @@
 
 This is a project created on the airport from Spain to Greece, in June 2019 as a souvenir.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
