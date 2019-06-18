@@ -33,7 +33,6 @@ export const Sky = styled(El)`
   width: 500px;
   height: 500px;
   max-height: 90vh;
-  position: relative;
   border-radius: 15px;
   display: flex;
   overflow: hidden;
@@ -137,6 +136,7 @@ export const Sea = styled(El)`
   z-index: 10;
   @media (max-width: 500px) {
     height: 350px;
+    top: 45%;
   }
 `
 export const Sunlight = styled(El)`
@@ -157,7 +157,7 @@ export const SunReflexion1 = styled(SunReflexion)`
   top: 10%;
   @media (max-width: 500px) {
     left: 11%;
-    top: 8%;
+    top: 6%;
   }
 `
 export const SunReflexion2 = styled(SunReflexion)`
@@ -166,7 +166,7 @@ export const SunReflexion2 = styled(SunReflexion)`
   width: 80px;
   @media (max-width: 500px) {
     left: 13%;
-    top: 18%;
+    top: 16%;
   }
 `
 export const SunReflexion3 = styled(SunReflexion)`
@@ -174,7 +174,7 @@ export const SunReflexion3 = styled(SunReflexion)`
   top: 46%;
   @media (max-width: 500px) {
     left: 16%;
-    top: 28%;
+    top: 26%;
     width: 60px;
   }
 `
