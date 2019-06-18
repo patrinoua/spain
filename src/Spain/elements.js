@@ -15,7 +15,7 @@ export const Button = styled.button`
   width: 50px;
   cursor: pointer;
   z-index: 10;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     left: 75%;
     background: white;
     border-radius: 10px;
@@ -24,21 +24,22 @@ export const Button = styled.button`
 export const El = styled.div`
   position: absolute;
   background: ${({ color }) => color};
-  left: ${({ left }) => left || '10px'};
-  top: ${({ top }) => top || '50px'};
+  left: ${({ left }) => left || 'auto'};
+  top: ${({ top }) => top || 'auto'};
   width: ${({ width }) => width || '100'}px;
   height: ${({ height }) => height || '10'}px;
 `
 export const Sky = styled(El)`
   width: 500px;
   height: 500px;
+  max-height: 90vh;
   position: relative;
   border-radius: 15px;
   display: flex;
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     width: 100%;
     height: 100%;
     top: 0;
@@ -87,7 +88,7 @@ export const Smiley = styled(El)`
   border-radius: 50%;
   position: absolute;
   z-index: 20;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     left: 14%;
     top: 10%;
   }
@@ -99,7 +100,7 @@ export const Sun = styled(El)`
   top: 11%;
   border: 5px solid black;
   border-radius: 50%;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     left: 14%;
     top: 10%;
   }
@@ -116,7 +117,7 @@ export const Mountain = styled(El)`
   overflow: hidden;
   z-index: 20;
   border-top-left-radius: 50px;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     left: 22%;
   }
 `
@@ -134,7 +135,7 @@ export const Sea = styled(El)`
   top: 41%;
   position: relative;
   z-index: 10;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     height: 350px;
   }
 `
@@ -154,7 +155,7 @@ export const SunReflexion = styled(El)`
 export const SunReflexion1 = styled(SunReflexion)`
   left: 9%;
   top: 10%;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     left: 11%;
     top: 8%;
   }
@@ -163,7 +164,7 @@ export const SunReflexion2 = styled(SunReflexion)`
   left: 5%;
   top: 28%;
   width: 80px;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     left: 13%;
     top: 18%;
   }
@@ -171,7 +172,7 @@ export const SunReflexion2 = styled(SunReflexion)`
 export const SunReflexion3 = styled(SunReflexion)`
   left: 7%;
   top: 46%;
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
     left: 16%;
     top: 28%;
     width: 60px;
