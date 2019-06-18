@@ -26,7 +26,9 @@ export default class Spain extends React.Component {
   render() {
     const { daylight, smileyIsVisible } = this.state
     const colors = {
-      sky: daylight ? 'rgb(0, 142, 255)' : '#171553',
+      sky: daylight
+        ? 'linear-gradient( rgb(0, 142, 255), white)'
+        : 'linear-gradient(#07061b, #4f4e78)',
       sun: daylight ? '#FFA42A' : '#fbe2ff',
       sea: daylight ? '#0900ff' : 'rgb(6, 9, 41)',
       mountain: daylight ? '#a73434' : '#040213',
