@@ -14,10 +14,16 @@ export const Button = styled.button`
   left: 50%;
   width: 50px;
   cursor: pointer;
+  z-index: 10;
+  @media (max-width: 400px) {
+    left: 75%;
+    background: white;
+    border-radius: 10px;
+  }
 `
 export const El = styled.div`
-  background: ${({ color }) => color};
   position: absolute;
+  background: ${({ color }) => color};
   left: ${({ left }) => left || '10px'};
   top: ${({ top }) => top || '50px'};
   width: ${({ width }) => width || '100'}px;
@@ -32,13 +38,15 @@ export const Sky = styled(El)`
   overflow: hidden;
   justify-content: center;
   align-items: center;
+  @media (max-width: 400px) {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+  }
 `
-export const Sea = styled(El)`
-  width: 600px;
-  height: 150px;
-  left: -30px;
-  top: 380px;
-`
+
 export const Eye = styled(El)`
   background: black;
   width: 10px;
@@ -79,6 +87,10 @@ export const Smiley = styled(El)`
   border-radius: 50%;
   position: absolute;
   z-index: 20;
+  @media (max-width: 400px) {
+    left: 14%;
+    top: 10%;
+  }
 `
 export const Sun = styled(El)`
   width: 100px;
@@ -87,12 +99,16 @@ export const Sun = styled(El)`
   top: 11%;
   border: 5px solid black;
   border-radius: 50%;
+  @media (max-width: 400px) {
+    left: 14%;
+    top: 10%;
+  }
 `
 
 export const Mountain = styled(El)`
   transform: rotate(50deg);
-  width: 300px;
-  height: 400px;
+  width: 340px;
+  height: 480px;
   left: 38%;
   top: 60%;
   border-radius: 10px;
@@ -100,6 +116,9 @@ export const Mountain = styled(El)`
   overflow: hidden;
   z-index: 20;
   border-top-left-radius: 50px;
+  @media (max-width: 400px) {
+    left: 22%;
+  }
 `
 export const Prasinada = styled(El)`
   border-radius: 50%;
@@ -107,6 +126,17 @@ export const Prasinada = styled(El)`
   top: -145px;
   width: 260px;
   height: 400px;
+`
+export const Sea = styled(El)`
+  width: 600px;
+  height: 150px;
+  left: 0;
+  top: 41%;
+  position: relative;
+  z-index: 10;
+  @media (max-width: 400px) {
+    height: 350px;
+  }
 `
 export const Sunlight = styled(El)`
   transform: rotate(${({ rotate }) => rotate || 0}deg);
@@ -118,4 +148,32 @@ export const SunReflexion = styled(El)`
   border-radius: 50%;
   border: 5px solid black;
   z-index: 20;
+  position: absolute;
+`
+
+export const SunReflexion1 = styled(SunReflexion)`
+  left: 9%;
+  top: 10%;
+  @media (max-width: 400px) {
+    left: 11%;
+    top: 8%;
+  }
+`
+export const SunReflexion2 = styled(SunReflexion)`
+  left: 5%;
+  top: 28%;
+  width: 80px;
+  @media (max-width: 400px) {
+    left: 13%;
+    top: 18%;
+  }
+`
+export const SunReflexion3 = styled(SunReflexion)`
+  left: 7%;
+  top: 46%;
+  @media (max-width: 400px) {
+    left: 16%;
+    top: 28%;
+    width: 60px;
+  }
 `

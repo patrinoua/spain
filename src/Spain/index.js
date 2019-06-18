@@ -2,7 +2,9 @@ import React from 'react'
 import {
   Container,
   Sky,
-  SunReflexion,
+  SunReflexion1,
+  SunReflexion2,
+  SunReflexion3,
   Sea,
   Sun,
   Sunlight,
@@ -47,11 +49,17 @@ export default class Spain extends React.Component {
             onMouseEnter={() => {
               this.setState({ smileyIsVisible: true })
             }}
+            onClick={() => {
+              this.setState({ smileyIsVisible: !smileyIsVisible })
+            }}
           />
           {smileyIsVisible && (
             <Smiley
               onMouseLeave={() => {
                 this.setState({ smileyIsVisible: false })
+              }}
+              onClick={() => {
+                this.setState({ smileyIsVisible: !smileyIsVisible })
               }}
             >
               <EyeLeft />
@@ -96,18 +104,14 @@ export default class Spain extends React.Component {
                 />
               </React.Fragment>
             )}
-          <SunReflexion
-            name="SUN_REFLEXION"
-            left={'9%'}
-            top={'80%'}
-            color={sun}
-          />
-          <SunReflexion width={'80'} left={'5%'} top={'85%'} color={sun} />
-          <SunReflexion left={'7%'} top={'90%'} color={sun} />
           <Mountain color={mountain}>
             <Prasinada color={prasinada} />
           </Mountain>
-          <Sea color={sea} />
+          <Sea color={sea}>
+            <SunReflexion1 color={sun} />
+            <SunReflexion2 color={sun} />
+            <SunReflexion3 color={sun} />
+          </Sea>
         </Sky>
       </Container>
     )
